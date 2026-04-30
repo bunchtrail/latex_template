@@ -1,0 +1,78 @@
+{
+	"latex-workshop.latex.outDir": "%DIR%/output",
+	"latex-workshop.formatting.latex": "latexindent",
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "project build.ps1",
+			"tools": ["project-build-script"]
+		},
+		{
+			"name": "latexmk (output)",
+			"tools": ["latexmk"]
+		},
+		{
+			"name": "xelatex + biber + xelatex x2",
+			"tools": ["xelatex-out", "biber-out", "xelatex-out", "xelatex-out"]
+		}
+	],
+	"latex-workshop.latex.recipe.default": "project build.ps1", // можно поставить по умолчанию
+	"latex-workshop.latex.autoBuild.run": "onSave",
+	"latex-workshop.latex.tools": [
+		{
+			"name": "project-build-script",
+			"command": "pwsh",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"scripts/build.ps1"
+			],
+			"env": {}
+		},
+		{
+			"name": "latexmk",
+			"command": "latexmk",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-outdir=%OUTDIR%",
+				"-auxdir=%OUTDIR%",
+				"-pdfxe", // <-- важно: -pdfxe для xelatex внутри latexmk
+				"%DOC%"
+			],
+			"env": {}
+		},
+		{
+			"name": "xelatex-out", // переименовано и изменена команда
+			"command": "xelatex",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-aux-directory=%OUTDIR%",
+				"-output-directory=%OUTDIR%",
+				"%DOC%"
+			],
+			"env": {}
+		},
+		{
+			"name": "biber-out",
+			"command": "biber",
+			"args": [
+				"--input-directory=%OUTDIR%",
+				"--output-directory=%OUTDIR%",
+				"%DOCFILE%"
+			],
+			"env": {}
+		}
+	],
+	"[latex]": {
+		"editor.wordWrap": "bounded",
+		"editor.wordWrapColumn": 100,
+		"editor.wrappingIndent": "same",
+		"editor.rulers": [100]
+	}
+}
+
