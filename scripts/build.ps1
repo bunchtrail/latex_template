@@ -76,4 +76,14 @@ if (Test-Path $sourcePdf) {
     Write-Warning "PDF not found in $outputDir"
 }
 
+# Копируем .synctex.gz рядом с PDF (нужно LaTeX Workshop для inverse search)
+$sourceSynctex = Join-Path $outputDir "main.synctex.gz"
+$targetSynctex = Join-Path $projectRoot "main.synctex.gz"
+if (Test-Path $sourceSynctex) {
+    Copy-Item -Path $sourceSynctex -Destination $targetSynctex -Force
+    Write-Host "SyncTeX copied to: $targetSynctex"
+} else {
+    Write-Warning "SyncTeX file not found in $outputDir"
+}
+
 Write-Host "Build succeeded. PDF: output/main.pdf"

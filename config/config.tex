@@ -12,7 +12,19 @@
 %% Графика и таблицы
 \usepackage{graphicx}              % Вставка рисунков
 \usepackage{booktabs}              % Улучшенное форматирование таблиц
-\graphicspath{{../results/}}      % Путь к папке с изображениями
+\usepackage{float}                 % Для размещения [H]
+\graphicspath{
+  {../results/}
+  {../results/img/}
+  {../results/img/bpwin/}
+  {../results/img/diagrams/}
+  {../results/img/screenshots/web/}
+  {../results/img/screenshots/mobile/}
+  {../results/img/plantuml/}
+  {../results/img/tests/}
+  {../results/img/analogs/}
+  {../results/img/swagger/}
+}      % Пути к папкам с изображениями
 \usepackage{titlesec}
 \usepackage{etoolbox} % для \pretocmd
 
@@ -30,7 +42,17 @@
 ]{geometry}
 
 %% Гиперссылки
-\usepackage{hyperref}
+\usepackage[
+    unicode=true,
+    colorlinks=false,
+    pdfborder={0 0 0},
+    bookmarks=true,
+    bookmarksopen=true,
+    bookmarksnumbered=true,
+    pdftitle={Преддипломная практика},
+    pdfauthor={},
+    pdfsubject={Отчёт по преддипломной практике}
+]{hyperref}
 
 %% Интервалы между строками
 \usepackage{setspace}

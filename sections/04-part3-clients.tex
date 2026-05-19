@@ -1,0 +1,173 @@
+\subsection{Реализация клиентских приложений}
+
+Программная система предоставляет два клиентских приложения, каждое из которых ориентировано на свою целевую аудиторию: диспетчерская веб-панель~--- для операторов муниципальных служб, мобильное приложение~--- для жителей города. Оба приложения взаимодействуют с единым серверным программным интерфейсом, используют общий механизм аутентификации на основе JWT и отображают одни и те же данные~--- обращения, категории, статусы, муниципальные службы.
+
+\subsubsection{Диспетчерская веб-панель}
+
+Веб-панель построена на React с TypeScript и сборщиком Vite. Управление состоянием реализовано через React Context. Интерфейс включает несколько основных страниц.
+
+Дашборд (рисунок~\ref{fig:web-dashboard}) отображает сводную статистику по обращениям: общее количество, количество по каждому статусу, графики динамики поступления и распределения по категориям. Для визуализации используется библиотека Recharts.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{impl-dashboard.png}}
+    \caption{Дашборд веб-панели диспетчера}
+    \label{fig:web-dashboard}
+\end{figure}
+
+Интерактивная карта обращений (рисунок~\ref{fig:web-map}) отображает маркеры обращений, цвет которых определяется статусом (новое~--- синий, принято~--- оранжевый, в работе~--- жёлтый, решено~--- зелёный). Реализованы фильтрация по статусу и категории, кластеризация маркеров при уменьшении масштаба и всплывающие окна с краткой информацией.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{impl-map.png}}
+    \caption{Интерактивная карта обращений}
+    \label{fig:web-map}
+\end{figure}
+
+Страница обращений (рисунок~\ref{fig:web-reports}) содержит табличный список с вкладками по статусам, поиском по описанию и переходом к карточке. На этой странице диспетчер видит обращения, поступившие от жителей через мобильное приложение.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{impl-reports.png}}
+    \caption{Страница обращений веб-панели}
+    \label{fig:web-reports}
+\end{figure}
+
+Карточка обращения (рисунок~\ref{fig:web-report-card}) отображает полную информацию: фотографию (загруженную жителем с мобильного устройства), описание, категорию, мини-карту с маркером, историю статусов и контактные данные ответственной службы. Диспетчер изменяет статус обращения через форму на этой странице~--- изменение немедленно отображается в мобильном приложении жителя.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{impl-report-card.png}}
+    \caption{Карточка обращения}
+    \label{fig:web-report-card}
+\end{figure}
+
+Справочник категорий проблем (рисунок~\ref{fig:web-categories}) обеспечивает просмотр, добавление, редактирование и удаление категорий. Этот же справочник используется мобильным приложением при создании обращений.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{impl-categories.png}}
+    \caption{Справочник категорий проблем}
+    \label{fig:web-categories}
+\end{figure}
+
+Страница муниципальных служб (рисунок~\ref{fig:web-services}) содержит перечень городских служб с контактной информацией и привязкой к категориям. Данные отображаются и в мобильном приложении~--- в карточке обращения жителю показываются контакты ответственной службы.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{impl-services.png}}
+    \caption{Страница муниципальных служб}
+    \label{fig:web-services}
+\end{figure}
+
+\subsubsection{Мобильное приложение для жителей}
+
+Мобильное приложение является каналом подачи обращений и отслеживания их статуса для жителей. Пользовательский интерфейс реализован в соответствии с макетами, разработанными на этапе проектирования.
+
+\textbf{Экран авторизации} (рисунок~\ref{fig:impl-auth}) отображается при запуске для неаутентифицированного пользователя. Содержит поля ввода электронной почты и пароля, кнопку <<Войти>>, альтернативный вход через Google и переход к регистрации. Аутентификация выполняется через тот же серверный эндпоинт AuthController, что и в веб-панели.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.3\linewidth]{mobile-auth-screen.png}}
+    \caption{Экран авторизации мобильного приложения}
+    \label{fig:impl-auth}
+\end{figure}
+
+\textbf{Экран карты} (рисунок~\ref{fig:impl-map}) является центральным экраном. Как и карта в веб-панели диспетчера, он отображает маркеры обращений с цветовой кодировкой по статусу, однако ориентирован на задачи жителя: просмотр обращений вблизи текущего местоположения, фильтрация по категориям и быстрый переход к созданию нового обращения через плавающую кнопку.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.35\linewidth]{mobile-map-screen.png}}
+    \caption{Экран карты мобильного приложения}
+    \label{fig:impl-map}
+\end{figure}
+
+\textbf{Экран создания обращения} (рисунок~\ref{fig:impl-create}) предназначен для фиксации проблемы. Включает выбор категории (загружаемой с сервера из того же справочника, что управляется через веб-панель), текстовое описание, прикрепление фотографий с камеры устройства (expo-image-picker) и указание местоположения на карте с возможностью автоопределения GPS-координат. При обнаружении дубликата в радиусе 50~м серверный алгоритм дедупликации возвращает список кандидатов, и приложение предлагает подтвердить существующее обращение.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.25\linewidth]{mobile-create-report-screen.png}}
+    \caption{Экран создания обращения}
+    \label{fig:impl-create}
+\end{figure}
+
+\textbf{Экран списка обращений} (рисунок~\ref{fig:impl-list}) предназначен для просмотра обращений текущего пользователя. Содержит вкладки фильтрации по статусу (<<Все>>, <<Активные>>, <<Завершённые>>), поисковую строку с дебаунсом и карточки обращений с миниатюрой, категорией и статусом. Статусы обращений обновляются в реальном времени~--- при изменении диспетчером через веб-панель обновлённый статус отображается в мобильном приложении.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.25\linewidth]{mobile-reports-list-screen.png}}
+    \caption{Экран списка обращений пользователя}
+    \label{fig:impl-list}
+\end{figure}
+
+\textbf{Экран карточки обращения} (рисунок~\ref{fig:impl-detail}) отображает подробную информацию: фотографию в полную ширину, категорию, адрес, дату создания, описание, счётчик подтверждений от других пользователей и хронологию изменения статусов~--- ту же историю, которую заполняет диспетчер в веб-панели.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.25\linewidth]{mobile-report-detail-screen.png}}
+    \caption{Экран карточки обращения}
+    \label{fig:impl-detail}
+\end{figure}
+
+\textbf{Экран уведомлений} (рисунок~\ref{fig:impl-notif}) информирует пользователя о смене статусов его обращений. Когда диспетчер изменяет статус в веб-панели, житель видит соответствующее уведомление при следующем открытии экрана.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.25\linewidth]{mobile-notifications-screen.png}}
+    \caption{Экран уведомлений}
+    \label{fig:impl-notif}
+\end{figure}
+
+\textbf{Экран профиля} (рисунок~\ref{fig:impl-profile}) предоставляет доступ к личным данным и агрегированной статистике по обращениям пользователя.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.25\linewidth]{mobile-profile-screen.png}}
+    \caption{Экран профиля пользователя}
+    \label{fig:impl-profile}
+\end{figure}
+
+Для обеспечения единообразия интерфейса созданы переиспользуемые компоненты: Button, Input, Card, LoadingIndicator, ErrorDisplay, ReportCard, ImageCarousel. Реализована адаптивность с использованием flexbox-разметки, относительных размеров и хука useWindowDimensions.
+
+\subsubsection{Алгоритмы взаимодействия мобильного приложения с сервером}
+
+\textbf{Создание обращения с проверкой дубликатов.} Пользователь заполняет форму, приложение выполняет валидацию и отправляет запрос POST /api/reports. Сервер выполняет алгоритм дедупликации (рисунок~\ref{fig:alg-dedup}). При обнаружении дубликатов клиент отображает модальное окно с предложением подтвердить существующее обращение или создать новое.
+
+\textbf{Работа с геолокацией.} При первом обращении к функционалу приложение запрашивает разрешение через API expo-location. Полученные координаты используются для предзаполнения местоположения при создании обращения и позиционирования карты. При отказе в разрешении предлагается ручное указание на карте.
+
+\textbf{Управление аутентификацией} (рисунок~\ref{fig:alg-auth}). После успешного входа данные сессии сохраняются в expo-secure-store. Токен автоматически добавляется к запросам через перехватчик Axios. При ответе 401 выполняется автоматическое обновление токена. При запуске приложения восстанавливается ранее сохранённая сессия.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.35\textwidth]{alg-auth.png}}
+    \caption{Алгоритм управления аутентификацией в мобильном приложении}
+    \label{fig:alg-auth}
+\end{figure}

@@ -73,6 +73,17 @@
 		"editor.wordWrapColumn": 100,
 		"editor.wrappingIndent": "same",
 		"editor.rulers": [100]
-	}
+	},
+
+	// SyncTeX: встроенный PDF viewer
+	"latex-workshop.view.pdf.viewer": "tab",
+	"latex-workshop.view.pdf.tab.editorGroup": "right",
+
+	// SyncTeX: путь к .synctex.gz (рядом с main.pdf в корне проекта)
+	"latex-workshop.synctex.path": "synctex",
+	"latex-workshop.synctex.synctexjs.enabled": false,
+
+	// Inverse search: двойной клик в PDF → строка в редакторе
+	"latex-workshop.view.pdf.internal.synctex.keybinding": "double-click"
 }
 

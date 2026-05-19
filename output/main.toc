@@ -1,0 +1,40 @@
+\xpg@aux {}{russian}
+\contentsline {section}{\numberline {1}Введение}{3}{section.1}%
+\contentsline {section}{\numberline {2}Анализ предметной области}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Описание предметной области}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Понятия, относящиеся к предметной области}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Текущее состояние и проблемы взаимодействия жителей с городской средой}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Моделирование целевого процесса}{10}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Обзор аналогов}{13}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Платформа обратной связи <<Госуслуги. Решаем вместе>>}{13}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Портал <<Наш город>> (Москва)}{14}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.3}Добродел (Московская область)}{14}{subsubsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.4}<<Наш Санкт-Петербург>>}{15}{subsubsection.2.5.4}%
+\contentsline {subsubsection}{\numberline {2.5.5}FixMyStreet}{15}{subsubsection.2.5.5}%
+\contentsline {subsubsection}{\numberline {2.5.6}Выводы по результатам анализа}{16}{subsubsection.2.5.6}%
+\contentsline {subsection}{\numberline {2.6}Постановка задачи}{16}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Проектирование}{19}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Структура системы}{19}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Структура серверной части}{20}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Проектирование базы данных}{21}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Проектирование взаимодействия компонентов}{22}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Структура мобильного приложения}{25}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Проектирование пользовательского интерфейса мобильного приложения}{27}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Реализация приложения}{32}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Выбор программных средств}{32}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Серверная часть и база данных}{32}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Клиентские приложения}{32}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Реализация серверной инфраструктуры}{33}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Реализация базы данных}{33}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Реализация программного интерфейса}{34}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Ключевые алгоритмы}{34}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}Реализация клиентских приложений}{36}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Диспетчерская веб-панель}{36}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Мобильное приложение для жителей}{40}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Алгоритмы взаимодействия мобильного приложения с сервером}{46}{subsubsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.4}Тестирование}{47}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Автоматизированное тестирование серверной части}{47}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Модульное тестирование мобильного приложения}{48}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Тестирование API через Swagger UI}{50}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4}Функциональное тестирование веб-панели}{53}{subsubsection.4.4.4}%
+\contentsline {section}{\numberline {5}Вывод}{55}{section.5}%

@@ -1,0 +1,108 @@
+\subsection{Реализация серверной части и веб-панели диспетчера}
+
+\subsubsection{Выбор программных средств для серверной части}
+
+В качестве СУБД выбрана PostgreSQL с расширением PostGIS~--- оно позволяет выполнять геопространственные запросы непосредственно на уровне базы данных. Функция ST\_DWithin расширения PostGIS позволяет эффективно искать обращения в заданном радиусе от указанной точки, что является основой алгоритма дедупликации.
+
+Серверная часть реализована на C\# с использованием ASP.NET Core и Entity Framework Core. Подход Code-First позволяет описывать модель данных в виде классов C\# и автоматически генерировать миграции. Выбор обусловлен следующими преимуществами: кроссплатформенность среды выполнения .NET, встроенная поддержка HTTPS и JWT-аутентификации, интеграция с OpenAPI (Swagger) для автодокументирования API.
+
+Для веб-панели диспетчера выбраны React и TypeScript с библиотекой Яндекс.Карт для отображения интерактивной карты. Сборка выполняется инструментом Vite.
+
+\subsubsection{Реализация базы данных и серверной логики}
+
+Работа с базой данных выполнена с использованием подхода Code-First в Entity Framework Core. Реализованы классы-сущности, конфигурации через Fluent API и контекст базы данных SmartCityDbContext. Конфигурации устанавливают ограничения длины строковых полей, уникальные индексы, правила каскадного удаления и составные ограничения.
+
+Для инкапсуляции логики доступа к данным реализован паттерн <<Репозиторий>>. Специализированный ReportRepository включает методы фильтрации по статусу, получения обращения со связанными данными и поиска дубликатов по координатам. Репозитории объединены через UnitOfWork.
+
+Реализованы контроллеры программного интерфейса: ReportsController (CRUD-операции с обращениями, поиск дубликатов, подтверждение обращений), CategoriesController (справочник категорий проблем), ServicesController (справочник муниципальных служб), AuthController (регистрация, аутентификация, управление сессией).
+
+\subsubsection{Ключевые алгоритмы серверной части}
+
+\textbf{Алгоритм дедупликации обращений.} При создании нового обращения среди активных обращений производится поиск записей с совпадающей категорией в радиусе 50~м от указанной точки. Геопространственный поиск выполняется функцией ST\_DWithin расширения PostGIS. При обнаружении дубликата пользователю предлагается подтвердить существующее обращение вместо создания нового. На рисунке~\ref{fig:alg-dedup} представлена блок-схема алгоритма дедупликации.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{alg-dedup.png}
+    \caption{Алгоритм дедупликации обращений}
+    \label{fig:alg-dedup}
+\end{figure}
+
+
+\textbf{Обработка смены статуса.} Жизненный цикл обращения включает пять статусов: New, Accepted, InProgress, Resolved, Rejected. При каждом изменении статуса создаётся запись в ReportStatusHistory с указанием даты, времени, идентификатора оператора и комментария. На рисунке~\ref{fig:alg-status} представлена блок-схема алгоритма обработки смены статуса.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{alg-status.png}
+    \caption{Алгоритм обработки смены статуса обращения}
+    \label{fig:alg-status}
+\end{figure}
+
+\subsubsection{Реализация веб-панели диспетчера}
+
+Веб-панель построена на React с TypeScript и сборщиком Vite. Интерфейс включает несколько основных страниц.
+
+Дашборд (рисунок~\ref{fig:web-dashboard}) отображает сводную статистику по обращениям: общее количество, количество по каждому статусу, графики динамики поступления и распределения по категориям.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{impl-dashboard.png}}
+    \caption{Дашборд веб-панели диспетчера}
+    \label{fig:web-dashboard}
+\end{figure}
+
+Интерактивная карта обращений (рисунок~\ref{fig:web-map}) отображает маркеры обращений, цвет которых определяется статусом. Реализованы фильтрация по статусу и категории, кластеризация маркеров и всплывающие окна с краткой информацией.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{impl-map.png}}
+    \caption{Интерактивная карта обращений}
+    \label{fig:web-map}
+\end{figure}
+
+Страница обращений (рисунок~\ref{fig:web-reports}) содержит табличный список с вкладками по статусам, поиском и переходом к карточке обращения.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{impl-reports.png}}
+    \caption{Страница обращений веб-панели}
+    \label{fig:web-reports}
+\end{figure}
+
+Карточка обращения (рисунок~\ref{fig:web-report-card}) отображает полную информацию об обращении: фотографию, описание, категорию, мини-карту с маркером, историю статусов и контактные данные ответственной службы. Диспетчер может изменить статус обращения через форму на этой странице.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{impl-report-card.png}}
+    \caption{Карточка обращения}
+    \label{fig:web-report-card}
+\end{figure}
+
+Справочник категорий проблем (рисунок~\ref{fig:web-categories}) обеспечивает просмотр, добавление, редактирование и удаление категорий.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{impl-categories.png}}
+    \caption{Справочник категорий проблем}
+    \label{fig:web-categories}
+\end{figure}
+
+Страница муниципальных служб (рисунок~\ref{fig:web-services}) содержит перечень городских служб с контактной информацией и привязкой к категориям проблем.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{impl-services.png}}
+    \caption{Страница муниципальных служб}
+    \label{fig:web-services}
+\end{figure}

@@ -1,0 +1,168 @@
+\subsection{Тестирование}
+
+\subsubsection{Автоматизированное тестирование серверной части}
+
+Для обеспечения качества серверной части разработаны автоматизированные тесты на платформе xUnit. Тестирование охватывает два уровня: модульные тесты и интеграционные тесты.
+
+Модульные тесты проверяют изолированную работу отдельных компонентов:
+\begin{itemize}
+    \item PasswordServiceTests~--- проверка алгоритма хеширования пароля: корректность хеширования, верификация с правильным и неверным паролем, уникальность хешей для одинаковых паролей;
+    \item AuthServiceSignInTests~--- проверка логики входа в систему: успешный вход жителя, отказ для несуществующего пользователя, отказ для неверного пароля, отказ для пользователя с неподходящей ролью.
+\end{itemize}
+
+Интеграционные тесты (AuthEndpointsTests) проверяют сквозной сценарий взаимодействия:
+\begin{itemize}
+    \item регистрация нового пользователя через POST /api/Auth/sign-up;
+    \item аутентификация зарегистрированного пользователя через POST /api/Auth/sign-in;
+    \item получение данных текущего пользователя через GET /api/Auth/me с bearer-токеном;
+    \item создание обращения авторизованным пользователем через POST /api/Reports.
+\end{itemize}
+
+На рисунке~\ref{fig:tests-backend} показан результат успешного выполнения тестов.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.85\linewidth,height=0.45\textheight,keepaspectratio]{tests-runner-result.png}}
+    \caption{Результат выполнения автоматизированных тестов серверной части}
+    \label{fig:tests-backend}
+\end{figure}
+
+Все тесты завершились успешно.
+
+\subsubsection{Модульное тестирование мобильного приложения}
+
+Для мобильного приложения разработаны модульные тесты на базе фреймворка Vitest. Общее количество тестовых файлов составляет 20 единиц. Тестирование охватывает следующие модули.
+
+\textbf{Модуль аутентификации} (6 тестовых файлов):
+\begin{itemize}
+    \item auth-api.test.ts~--- проверка корректности HTTP-запросов к эндпоинтам аутентификации и маппинг серверного ответа;
+    \item auth-validation.test.ts~--- проверка валидации полей форм входа, регистрации и восстановления пароля;
+    \item auth-session-manager.test.ts~--- проверка управления жизненным циклом сессии: сохранение и восстановление токенов;
+    \item google-sign-in-stub.test.ts, lazy-google-auth-client.test.ts~--- проверка интеграции с механизмом входа через Google;
+    \item google-brand-icon.test.ts~--- проверка корректности отображения фирменной иконки.
+\end{itemize}
+
+\textbf{Модуль интерактивной карты} (6 тестовых файлов):
+\begin{itemize}
+    \item map-api.test.ts~--- проверка загрузки обращений и событий с сервера, маппинг DTO-объектов;
+    \item map-model.test.ts~--- проверка логики построения ленты карты, фильтрации по слоям и категориям, группировки маркеров;
+    \item map-helpers.test.ts~--- проверка вспомогательных функций для работы с координатами;
+    \item map-search.test.ts, map-search-history-state.test.ts~--- проверка функционала поиска на карте;
+    \item request-guard.test.ts~--- проверка механизма предотвращения дублирования одновременных запросов.
+\end{itemize}
+
+\textbf{Модуль обращений} (2 тестовых файла):
+\begin{itemize}
+    \item reports-api.test.ts~--- проверка операций с обращениями: получение, создание, поиск дубликатов, подтверждение;
+    \item report-errors.test.ts~--- проверка классификации ошибок API по HTTP-кодам и формирование сообщений.
+\end{itemize}
+
+\textbf{Модуль уведомлений} (2 тестовых файла):
+\begin{itemize}
+    \item notifications-api.test.ts~--- проверка загрузки уведомлений с сервера;
+    \item notifications-formatting.test.ts~--- проверка форматирования текста уведомлений.
+\end{itemize}
+
+\textbf{Ядро приложения} (4 тестовых файла):
+\begin{itemize}
+    \item install-auth-session-bridge.test.ts~--- проверка перехватчиков HTTP-клиента;
+    \item resolve-api-base-url.test.ts~--- проверка определения базового адреса API;
+    \item runtime-log-buffer.test.ts, runtime-log-session.test.ts~--- проверка буферизации и сессионного управления журналом событий.
+\end{itemize}
+
+На рисунке~\ref{fig:tests-mobile} показан результат выполнения модульных тестов мобильного приложения.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.85\linewidth,height=0.45\textheight,keepaspectratio]{vittest.png}}
+    \caption{Результат выполнения модульных тестов мобильного приложения}
+    \label{fig:tests-mobile}
+\end{figure}
+
+Все тесты завершились успешно.
+
+\subsubsection{Тестирование API через Swagger UI}
+
+Для проверки корректности работы серверного программного интерфейса выполнено тестирование через встроенный интерфейс Swagger UI.
+
+На рисунке~\ref{fig:swagger-get-reports} представлен запрос на получение списка обращений (GET /api/Reports). В ответе возвращается массив записей с идентификатором, категорией, описанием, координатами и текущим статусом. Сервер возвращает код ответа 200.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{swagger-get-reports.png}}
+    \caption{Запрос на получение списка обращений}
+    \label{fig:swagger-get-reports}
+\end{figure}
+
+На рисунке~\ref{fig:swagger-duplicates} представлен запрос на поиск дубликатов (GET /api/Reports/duplicates). Эндпоинт возвращает массив обращений в радиусе 50~м от указанных координат с совпадающей категорией.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{swagger-find-duplicates.png}}
+    \caption{Запрос на поиск дубликатов обращений}
+    \label{fig:swagger-duplicates}
+\end{figure}
+
+На рисунке~\ref{fig:swagger-categories} представлен запрос на получение справочника категорий (GET /api/Categories).
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{swagger-get-categories.png}}
+    \caption{Запрос на получение справочника категорий}
+    \label{fig:swagger-categories}
+\end{figure}
+
+На рисунке~\ref{fig:swagger-create} представлен запрос на создание нового обращения (POST /api/Reports).
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{create-report.png}}
+    \caption{Запрос на создание нового обращения}
+    \label{fig:swagger-create}
+\end{figure}
+
+Во всех случаях система возвращала ожидаемые коды ответа и корректные структуры JSON, что подтверждает готовность серверного API.
+
+\subsubsection{Функциональное тестирование веб-панели}
+
+Функциональное тестирование веб-панели диспетчера включало следующие проверки:
+\begin{itemize}
+    \item тестирование адаптивности интерфейса на различных разрешениях экрана~--- на рисунке~\ref{fig:web-adaptive} продемонстрировано корректное отображение панели в различных режимах;
+    \item проверка корректности работы интерактивной карты: масштабирование, перемещение, отображение маркеров обращений, фильтрация по статусу и категории;
+    \item проверка корректности отображения дашборда, таблицы обращений и карточки обращения;
+    \item проверка работы справочников категорий и муниципальных служб: добавление, редактирование, удаление записей.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{adaptive-web-panel.png}}
+    \caption{Адаптивное отображение веб-панели диспетчера}
+    \label{fig:web-adaptive}
+\end{figure}
+
+На рисунке~\ref{fig:web-map-testing} представлена карта в режиме функционального тестирования: активный фильтр по статусу, маркер обращения и открытое всплывающее окно карточки.
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxrule}{0.4pt}
+    \setlength{\fboxsep}{0pt}
+    \fbox{\includegraphics[width=0.96\linewidth,height=0.42\textheight,keepaspectratio]{testing-map-features.png}}
+    \caption{Функциональное тестирование интерактивной карты обращений}
+    \label{fig:web-map-testing}
+\end{figure}
+
+Результаты тестирования подтвердили корректность работы всех компонентов программной системы: серверного API, мобильного приложения и веб-панели диспетчера.

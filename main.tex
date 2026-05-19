@@ -1,23 +1,34 @@
 \documentclass[a4paper,14pt]{extarticle}
 
-% Подключение конфигурационного файла с настройками (если используется)
+% Подключение конфигурационного файла с настройками
 \input{config/config.tex}
 
 \begin{document}
 
 % Подключаем титульную страницу
-\input{sections/title}
+%\input{sections/title}
 
-\clearpage  % Переход на новую страницу после титульного листа
+\clearpage
 
-\section{Цель работы}
+% Содержание на отдельной странице
+{\hypersetup{hidelinks}
+\tableofcontents}
 
+\clearpage
 
-\section{Задание}
+\section{Введение}
+\input{sections/01-introduction}
 
+\section{Анализ предметной области}
+\input{sections/02-analysis}
 
-\section{Ход работы}
+\section{Проектирование}
+\input{sections/03-design}
+
+\section{Реализация приложения}
+\input{sections/04-implementation}
 
 \section{Вывод}
+\input{sections/05-conclusion}
 
 \end{document}

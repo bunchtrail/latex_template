@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.4.30)  30 APR 2026 14:14
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.4.30)  18 MAY 2026 22:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -349,14 +349,22 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count314
 \@thisrulewidth=\dimen188
 )
+(C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count315
+\float@exts=\toks23
+\float@box=\box56
+\@float@everytoks=\toks24
+\@floatcapt=\box57
+)
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box56
+\ttl@box=\box58
 \beforetitleunit=\skip58
 \aftertitleunit=\skip59
 \ttl@plus=\dimen189
 \ttl@minus=\dimen190
-\ttl@toksa=\toks23
+\ttl@toksa=\toks25
 \titlewidth=\dimen191
 \titlewidthlast=\dimen192
 \titlewidthfirst=\dimen193
@@ -367,9 +375,9 @@ Package: geometry 2026/03/07 v6.0 Page Geometry
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count315
-\Gm@cntv=\count316
-\c@Gm@tempcnt=\count317
+\Gm@cnth=\count316
+\Gm@cntv=\count317
+\c@Gm@tempcnt=\count318
 \Gm@bindingoffset=\dimen194
 \Gm@wd@mp=\dimen195
 \Gm@odd@mp=\dimen196
@@ -378,7 +386,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen199
 \Gm@layouthoffset=\dimen256
 \Gm@layoutvoffset=\dimen257
-\Gm@dimlist=\toks24
+\Gm@dimlist=\toks26
 
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
@@ -427,7 +435,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count318
+\c@section@level=\count319
 )
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
 ty
@@ -435,17 +443,23 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \@linkdim=\dimen258
-\Hy@linkcounter=\count319
-\Hy@pagecounter=\count320
+\Hy@linkcounter=\count320
+\Hy@pagecounter=\count321
  (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
 ) (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count321
+\Hy@SavedSpaceFactor=\count322
  (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
 )
+Package hyperref Info: Option `unicode' set `true' on input line 4070.
+Package hyperref Info: Option `colorlinks' set `false' on input line 4070.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4070.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4070.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4070
+.
 Package hyperref Info: Hyper figures OFF on input line 4199.
 Package hyperref Info: Link nesting OFF on input line 4204.
 Package hyperref Info: Hyper index ON on input line 4207.
@@ -453,7 +467,7 @@ Package hyperref Info: Plain pages OFF on input line 4214.
 Package hyperref Info: Backreferencing OFF on input line 4219.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4466.
-\c@Hy@tempcnt=\count322
+\c@Hy@tempcnt=\count323
 
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
@@ -470,7 +484,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count323
+\Fld@menulength=\count324
 \Field@Width=\dimen260
 \Fld@charsize=\dimen261
 Package hyperref Info: Hyper figures OFF on input line 6091.
@@ -480,19 +494,19 @@ Package hyperref Info: backreferencing OFF on input line 6106.
 Package hyperref Info: Link coloring OFF on input line 6111.
 Package hyperref Info: Link coloring with OCG OFF on input line 6116.
 Package hyperref Info: PDF/A mode OFF on input line 6121.
-\Hy@abspage=\count324
-\c@Item=\count325
-\c@Hfootnote=\count326
+\Hy@abspage=\count325
+\c@Item=\count326
+\c@Hfootnote=\count327
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
 File: hxetex.def 2026-04-24 v7.01q Hyperref driver for XeTeX
-\pdfm@box=\box57
-\c@Hy@AnnotLevel=\count327
-\HyField@AnnotCount=\count328
-\Fld@listcount=\count329
-\c@bookmark@seq@number=\count330
+\pdfm@box=\box59
+\c@Hy@AnnotLevel=\count328
+\HyField@AnnotCount=\count329
+\Fld@listcount=\count330
+\c@bookmark@seq@number=\count331
 
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -512,18 +526,18 @@ Package: setspace 2022/12/04 v6.7b set line spacing
 )
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
 Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
-\MT@toks=\toks25
-\MT@tempbox=\box58
-\MT@count=\count331
+\MT@toks=\toks27
+\MT@tempbox=\box60
+\MT@count=\count332
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
 LaTeX Info: Redefining \leftprotrusion on input line 1085.
-\MT@prot@toks=\toks26
+\MT@prot@toks=\toks28
 LaTeX Info: Redefining \rightprotrusion on input line 1104.
 LaTeX Info: Redefining \textls on input line 1449.
 \MT@outer@kern=\dimen262
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
-\MT@listname@count=\count332
+\MT@listname@count=\count333
 
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-xet
 ex.def
@@ -540,17 +554,17 @@ File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
 LaTeX Info: Redefining \microtypesetup on input line 3065.
 )
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count333
-\lst@gtempboxa=\box59
-\lst@token=\toks27
-\lst@length=\count334
+\lst@mode=\count334
+\lst@gtempboxa=\box61
+\lst@token=\toks29
+\lst@length=\count335
 \lst@currlwidth=\dimen263
-\lst@column=\count335
-\lst@pos=\count336
+\lst@column=\count336
+\lst@pos=\count337
 \lst@lostspace=\dimen264
 \lst@width=\dimen265
-\lst@newlines=\count337
-\lst@lineno=\count338
+\lst@newlines=\count338
+\lst@lineno=\count339
 \lst@maxwidth=\dimen266
 
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
@@ -558,9 +572,9 @@ File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 )
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count339
-\lst@skipnumbers=\count340
-\lst@framebox=\box60
+\c@lstnumber=\count340
+\lst@skipnumbers=\count341
+\lst@framebox=\box62
 )
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
@@ -592,17 +606,17 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip62
 \enit@outerparindent=\dimen267
-\enit@toks=\toks28
-\enit@inbox=\box61
-\enit@count@id=\count341
-\enitdp@description=\count342
+\enit@toks=\toks30
+\enit@inbox=\box63
+\enit@count@id=\count342
+\enitdp@description=\count343
 ) (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
 Package: fancyvrb 2026/04/16 4.6a verbatim text (tvz,hv)
-\FV@CodeLineNo=\count343
+\FV@CodeLineNo=\count344
 \FV@InFile=\read2
-\FV@TabBox=\box62
-\c@FancyVerbLine=\count344
-\FV@StepNumber=\count345
+\FV@TabBox=\box64
+\c@FancyVerbLine=\count345
+\FV@StepNumber=\count346
 \FV@OutFile=\write3
 ) (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
 Package: fvextra 2026/02/25 v1.14.0 fvextra - extensions and patches for fancyv
@@ -617,47 +631,47 @@ Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 ))
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
 Package: lineno 2026/03/08 line numbers on paragraphs v5.9
-\linenopenalty=\count346
-\output=\toks29
-\linenoprevgraf=\count347
+\linenopenalty=\count347
+\output=\toks31
+\linenoprevgraf=\count348
 \linenumbersep=\dimen268
 \linenumberwidth=\dimen269
-\c@linenumber=\count348
-\c@pagewiselinenumber=\count349
-\c@LN@truepage=\count350
-\c@internallinenumber=\count351
-\c@internallinenumbers=\count352
+\c@linenumber=\count349
+\c@pagewiselinenumber=\count350
+\c@LN@truepage=\count351
+\c@internallinenumber=\count352
+\c@internallinenumbers=\count353
 \quotelinenumbersep=\dimen270
 \bframerule=\dimen271
 \bframesep=\dimen272
-\bframebox=\box63
-\@LN@amsmath@ams@eqpen=\count353
+\bframebox=\box65
+\@LN@amsmath@ams@eqpen=\count354
 )
-\c@FancyVerbWriteLine=\count354
-\c@FancyVerbBufferLine=\count355
-\c@FV@TrueTabGroupLevel=\count356
-\c@FV@TrueTabCounter=\count357
-\FV@TabBox@Group=\box64
-\FV@bgcolorstructbox=\box65
+\c@FancyVerbWriteLine=\count355
+\c@FancyVerbBufferLine=\count356
+\c@FV@TrueTabGroupLevel=\count357
+\c@FV@TrueTabCounter=\count358
+\FV@TabBox@Group=\box66
+\FV@bgcolorstructbox=\box67
 \FV@TmpLength=\skip63
-\c@FV@HighlightLinesStart=\count358
-\c@FV@HighlightLinesStop=\count359
-\FV@LoopCount=\count360
-\FV@NCharsBox=\box66
+\c@FV@HighlightLinesStart=\count359
+\c@FV@HighlightLinesStop=\count360
+\FV@LoopCount=\count361
+\FV@NCharsBox=\box68
 \FV@BreakIndent=\dimen273
-\FV@BreakIndentNChars=\count361
+\FV@BreakIndentNChars=\count362
 \FV@BreakSymbolSepLeft=\dimen274
-\FV@BreakSymbolSepLeftNChars=\count362
+\FV@BreakSymbolSepLeftNChars=\count363
 \FV@BreakSymbolSepRight=\dimen275
-\FV@BreakSymbolSepRightNChars=\count363
+\FV@BreakSymbolSepRightNChars=\count364
 \FV@BreakSymbolIndentLeft=\dimen276
-\FV@BreakSymbolIndentLeftNChars=\count364
+\FV@BreakSymbolIndentLeftNChars=\count365
 \FV@BreakSymbolIndentRight=\dimen277
-\FV@BreakSymbolIndentRightNChars=\count365
-\c@FancyVerbLineBreakLast=\count366
-\FV@LineBox=\box67
-\FV@LineIndentBox=\box68
-\c@FV@BreakBufferDepth=\count367
+\FV@BreakSymbolIndentRightNChars=\count366
+\c@FancyVerbLineBreakLast=\count367
+\FV@LineBox=\box69
+\FV@LineIndentBox=\box70
+\c@FV@BreakBufferDepth=\count368
 \FV@LineWidth=\dimen278
 )
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
@@ -697,7 +711,9 @@ ext;"
 (fontspec)             Roman/BI/OT:script=cyrl;language=dflt;+smcp;mapping=tex-
 text;"
 
-(D:\Vyatsu\LaTeX_template\latex\output\main.aux)
+
+(D:\Projects\katya\диплом\преддипломная практика\latex_template\output\main.aux
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -820,8 +836,11 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 6.
-(D:\Vyatsu\LaTeX_template\latex\output\main.out)
-(D:\Vyatsu\LaTeX_template\latex\output\main.out)
+
+(D:\Projects\katya\диплом\преддипломная практика\latex_template\output\main.out
+)
+(D:\Projects\katya\диплом\преддипломная практика\latex_template\output\main.out
+)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -844,19 +863,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `TimesNewRoman' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-\c@lstlisting=\count368
-(sections/title.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+\c@lstlisting=\count369
 
-
+(D:\Projects\katya\диплом\преддипломная практика\latex_template\output\main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 
 (C:\Users\79121\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -870,30 +887,400 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 [1
 
-]) [1
 
 
-] [2
+])
+\tf@toc=\write5
+\openout5 = `main.toc'.
 
-] [3
+ [2] (sections/01-introduction.tex [3
 
-] [4
 
-] (D:\Vyatsu\LaTeX_template\latex\output\main.aux)
+]) [4] (sections/02-analysis.tex
+Underfull \hbox (badness 2512) in paragraph at lines 5--6
+\TU/TimesNewRoman(1)/m/n/14.4 службами. Город Киров — административный центр Ки
+ровской области с
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 5--6
+\TU/TimesNewRoman(1)/m/n/14.4 (Ленинский, Октябрьский, Первомайский, Нововятски
+й), каждый из которых
+ []
+
+
+Underfull \hbox (badness 4582) in paragraph at lines 5--6
+\TU/TimesNewRoman(1)/m/n/14.4 обладает собственной инфраструктурой жилищно-комм
+унального хозяйства,
+ []
+
+[5
+
+] [6] [7]
+Underfull \hbox (badness 4608) in paragraph at lines 59--60
+[]\TU/TimesNewRoman(1)/m/n/14.4 Интерактивная карта — компонент программной сис
+темы, обеспечи-
+ []
+
+
+Underfull \hbox (badness 2376) in paragraph at lines 59--60
+\TU/TimesNewRoman(1)/m/n/14.4 вающий визуальное отображение обращений в привязк
+е к координатам на
+ []
+
+[8]
+File: ../results/img/bpwin/current_a-0.png Graphic file (type bmp)
+<../results/img/bpwin/current_a-0.png>
+ [9]
+File: ../results/img/bpwin/current_a0.png Graphic file (type bmp)
+<../results/img/bpwin/current_a0.png>
+
+Underfull \hbox (badness 2073) in paragraph at lines 105--106
+\TU/TimesNewRoman(1)/m/n/14.4 жителем. Управление осуществляется на основании з
+аконодательства РФ и
+ []
+
+[10]
+File: ../results/img/bpwin/to-be_a-0.png Graphic file (type bmp)
+<../results/img/bpwin/to-be_a-0.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+[]\TU/TimesNewRoman(1)/m/n/14.4 проверка на дубликаты — серверный алгоритм выпо
+лняет геопро-
+ []
+
+
+Underfull \hbox (badness 1527) in paragraph at lines 117--118
+\TU/TimesNewRoman(1)/m/n/14.4 странственный поиск существующих обращений в ради
+усе 50 м; при
+ []
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 119--120
+[]\TU/TimesNewRoman(1)/m/n/14.4 контроль исполнения — отслеживание статуса обра
+щения, фиксация
+ []
+
+[11]
+File: ../results/img/bpwin/to_be_a0.png Graphic file (type bmp)
+<../results/img/bpwin/to_be_a0.png>
+
+Underfull \hbox (badness 4713) in paragraph at lines 129--131
+[]\TU/TimesNewRoman(1)/m/n/14.4 Подпроцесс «Диспетчеризация» детализирован на д
+иаграмме в нота-
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 129--131
+\TU/TimesNewRoman(1)/m/n/14.4 ции IDEF3 (рисунок []5[]). Диаграмма описывает по
+следовательность действий
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 131--132
+\TU/TimesNewRoman(1)/m/n/14.4 веб-панели, система отображает описание, фотограф
+ию (загруженную
+ []
+
+[12]
+File: ../results/img/bpwin/to_be_dispatcher_idef3_decompose.png Graphic file (t
+ype bmp)
+<../results/img/bpwin/to_be_dispatcher_idef3_decompose.png>
+ [13]
+File: ../results/img/analogs/gosuslugi-reshaem-vmeste.jpg Graphic file (type bm
+p)
+<../results/img/analogs/gosuslugi-reshaem-vmeste.jpg>
+File: ../results/img/analogs/nash-gorod-moskva-user.jpg Graphic file (type bmp)
+
+<../results/img/analogs/nash-gorod-moskva-user.jpg>
+
+Underfull \hbox (badness 1629) in paragraph at lines 175--176
+[]\TU/TimesNewRoman(1)/m/n/14.4 «Добродел» — портал обращений жителей Московско
+й области с ме-
+ []
+
+
+Underfull \hbox (badness 3019) in paragraph at lines 175--176
+\TU/TimesNewRoman(1)/m/n/14.4 Мобильное приложение поддерживает фотофиксацию, а
+втоопределение гео-
+ []
+
+File: ../results/img/analogs/dobrodel-user.jpg Graphic file (type bmp)
+<../results/img/analogs/dobrodel-user.jpg>
+[14]
+File: ../results/img/analogs/nash-spb-user.jpg Graphic file (type bmp)
+<../results/img/analogs/nash-spb-user.jpg>
+File: ../results/img/analogs/fixmystreet-user.png Graphic file (type bmp)
+<../results/img/analogs/fixmystreet-user.png>
+ [15]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+[]\TU/TimesNewRoman(1)/m/n/14.4 региональные решения («Наш город», «Добродел», 
+«Наш Санкт-
+ []
+
+[16]
+File: ../results/img/plantuml/use-case-mobile.png Graphic file (type bmp)
+<../results/img/plantuml/use-case-mobile.png>
+) [17] [18] (sections/03-design.tex
+Underfull \hbox (badness 4647) in paragraph at lines 1--2
+\TU/TimesNewRoman(1)/m/n/14.4 фиксации городских событий. Рассматриваются струк
+тура системы, струк-
+ []
+
+
+Underfull \hbox (badness 1997) in paragraph at lines 1--2
+\TU/TimesNewRoman(1)/m/n/14.4 тура серверной части, проектирование базы данных,
+ структура мобильного
+ []
+
+
+Underfull \hbox (badness 3386) in paragraph at lines 5--6
+\TU/TimesNewRoman(1)/m/n/14.4 соответствующую трёхзвенной модели: уровень предс
+тавления (клиентские
+ []
+
+File: ../results/img/plantuml/architecture-full.png Graphic file (type bmp)
+<../results/img/plantuml/architecture-full.png>
+[19
+
+]
+File: ../results/img/plantuml/server-components.png Graphic file (type bmp)
+<../results/img/plantuml/server-components.png>
+ [20]
+File: ../results/img/plantuml/erd-smartcity.png Graphic file (type bmp)
+<../results/img/plantuml/erd-smartcity.png>
+ [21]
+Underfull \hbox (badness 2671) in paragraph at lines 59--60
+[]\TU/TimesNewRoman(1)/m/n/14.4 ReportCategory — классификация проблем (дороги,
+ освещение, благо-
+ []
+
+File: ../results/img/plantuml/state-appeal.png Graphic file (type bmp)
+<../results/img/plantuml/state-appeal.png>
+[22]
+File: ../results/img/plantuml/seq-create-appeal-mobile.png Graphic file (type b
+mp)
+<../results/img/plantuml/seq-create-appeal-mobile.png>
+ [23]
+File: ../results/img/plantuml/seq-dispatcher.png Graphic file (type bmp)
+<../results/img/plantuml/seq-dispatcher.png>
+ [24]
+File: ../results/img/plantuml/mobile-architecture.png Graphic file (type bmp)
+<../results/img/plantuml/mobile-architecture.png>
+ [25]
+File: ../results/img/plantuml/navigation-structure.png Graphic file (type bmp)
+<../results/img/plantuml/navigation-structure.png>
+ [26]
+File: ../results/img/screenshots/mobile/screen-auth.png Graphic file (type bmp)
+
+<../results/img/screenshots/mobile/screen-auth.png>
+ [27]
+File: ../results/img/screenshots/mobile/screen-map.png Graphic file (type bmp)
+<../results/img/screenshots/mobile/screen-map.png>
+File: ../results/img/screenshots/mobile/screen-create-report.png Graphic file (
+type bmp)
+<../results/img/screenshots/mobile/screen-create-report.png>
+ [28]
+File: ../results/img/screenshots/mobile/screen-reports-list.png Graphic file (t
+ype bmp)
+<../results/img/screenshots/mobile/screen-reports-list.png>
+File: ../results/img/screenshots/mobile/screen-report-detail.png Graphic file (
+type bmp)
+<../results/img/screenshots/mobile/screen-report-detail.png>
+ [29]
+File: ../results/img/screenshots/mobile/screen-notifications.png Graphic file (
+type bmp)
+<../results/img/screenshots/mobile/screen-notifications.png>
+File: ../results/img/screenshots/mobile/screen-profile.png Graphic file (type b
+mp)
+<../results/img/screenshots/mobile/screen-profile.png>
+) [30] [31]
+(sections/04-implementation.tex (sections/04-part1-stack.tex
+Underfull \hbox (badness 7362) in paragraph at lines 15--16
+[]\TU/TimesNewRoman(1)/m/n/14.4 Диспетчерская веб-панель реализована на React с
+ библиотекой Ян-
+ []
+
+
+Underfull \hbox (badness 4108) in paragraph at lines 15--16
+\TU/TimesNewRoman(1)/m/n/14.4 декс.Карты (JavaScript API) для интерактивных кар
+т. Сборка выполняется
+ []
+
+
+Underfull \hbox (badness 3323) in paragraph at lines 15--16
+\TU/TimesNewRoman(1)/m/n/14.4 инструментом Vite. Яндекс.Карты предоставляют гот
+овый API для отобра-
+ []
+
+
+Underfull \hbox (badness 1946) in paragraph at lines 15--16
+\TU/TimesNewRoman(1)/m/n/14.4 жения карты, маркеров, кластеризации и геокодиров
+ания на русскоязычной
+ []
+
+[32
+
+]) (sections/04-part2-server.tex
+Underfull \hbox (badness 1048) in paragraph at lines 17--1
+\TU/TimesNewRoman(1)/m/n/14.4 через expo-router, карта — через react-native-map
+s (Google Maps на Android,
+ []
+
+[33]
+Underfull \hbox (badness 1325) in paragraph at lines 26--27
+\TU/TimesNewRoman(1)/m/n/14.4 ращений производится поиск записей с совпадающей 
+категорией в радиусе
+ []
+
+
+Underfull \hbox (badness 4531) in paragraph at lines 26--27
+\TU/TimesNewRoman(1)/m/n/14.4 ST_DWithin расширения PostGIS. При обнаружении ду
+бликата клиентское
+ []
+
+File: ../results/img/plantuml/alg-dedup.png Graphic file (type bmp)
+<../results/img/plantuml/alg-dedup.png>
+[34]
+File: ../results/img/plantuml/alg-status.png Graphic file (type bmp)
+<../results/img/plantuml/alg-status.png>
+ [35]) (sections/04-part3-clients.tex
+Underfull \hbox (badness 1297) in paragraph at lines 3--4
+\TU/TimesNewRoman(1)/m/n/14.4 из которых ориентировано на свою целевую аудитори
+ю: диспетчерская веб-
+ []
+
+File: ../results/img/screenshots/web/impl-dashboard.png Graphic file (type bmp)
+
+<../results/img/screenshots/web/impl-dashboard.png>
+[36]
+File: ../results/img/screenshots/web/impl-map.png Graphic file (type bmp)
+<../results/img/screenshots/web/impl-map.png>
+ [37]
+File: ../results/img/screenshots/web/impl-reports.png Graphic file (type bmp)
+<../results/img/screenshots/web/impl-reports.png>
+File: ../results/img/screenshots/web/impl-report-card.png Graphic file (type bm
+p)
+<../results/img/screenshots/web/impl-report-card.png>
+ [38]
+File: ../results/img/screenshots/web/impl-categories.png Graphic file (type bmp
+)
+<../results/img/screenshots/web/impl-categories.png>
+
+Underfull \hbox (badness 2781) in paragraph at lines 64--65
+[]\TU/TimesNewRoman(1)/m/n/14.4 Страница муниципальных служб (рисунок []34[]) с
+одержит перечень го-
+ []
+
+File: ../results/img/screenshots/web/impl-services.png Graphic file (type bmp)
+<../results/img/screenshots/web/impl-services.png>
+[39]
+File: ../results/img/screenshots/mobile/mobile-auth-screen.png Graphic file (ty
+pe bmp)
+<../results/img/screenshots/mobile/mobile-auth-screen.png>
+ [40]
+File: ../results/img/screenshots/mobile/mobile-map-screen.png Graphic file (typ
+e bmp)
+<../results/img/screenshots/mobile/mobile-map-screen.png>
+ [41]
+File: ../results/img/screenshots/mobile/mobile-create-report-screen.png Graphic
+ file (type bmp)
+<../results/img/screenshots/mobile/mobile-create-report-screen.png>
+ [42]
+File: ../results/img/screenshots/mobile/mobile-reports-list-screen.png Graphic 
+file (type bmp)
+<../results/img/screenshots/mobile/mobile-reports-list-screen.png>
+ [43]
+File: ../results/img/screenshots/mobile/mobile-report-detail-screen.png Graphic
+ file (type bmp)
+<../results/img/screenshots/mobile/mobile-report-detail-screen.png>
+File: ../results/img/screenshots/mobile/mobile-notifications-screen.png Graphic
+ file (type bmp)
+<../results/img/screenshots/mobile/mobile-notifications-screen.png>
+ [44]
+File: ../results/img/screenshots/mobile/mobile-profile-screen.png Graphic file 
+(type bmp)
+<../results/img/screenshots/mobile/mobile-profile-screen.png>
+
+Underfull \hbox (badness 1783) in paragraph at lines 156--157
+[]\TU/TimesNewRoman(1)/m/n/14.4 Для обеспечения единообразия интерфейса созданы
+ переиспользуемые
+ []
+
+
+Underfull \hbox (badness 4726) in paragraph at lines 156--157
+\TU/TimesNewRoman(1)/m/n/14.4 компоненты: Button, Input, Card, LoadingIndicator
+, ErrorDisplay, ReportCard,
+ []
+
+[45]
+File: ../results/img/plantuml/alg-auth.png Graphic file (type bmp)
+<../results/img/plantuml/alg-auth.png>
+) (sections/04-part4-testing.tex [46] [47]
+Overfull \hbox (12.86514pt too wide) in paragraph at lines 16--17
+[]\TU/TimesNewRoman(1)/m/n/14.4 аутентификация зарегистрированного пользователя
+ через POST /api/Auth/sign-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[]\TU/TimesNewRoman(1)/m/n/14.4 создание обращения авторизованным пользователем
+ через POST
+ []
+
+File: ../results/img/tests/tests-runner-result.png Graphic file (type bmp)
+<../results/img/tests/tests-runner-result.png>
+
+Underfull \hbox (badness 1609) in paragraph at lines 40--41
+[]\TU/TimesNewRoman(1)/m/n/14.4 auth-api.test.ts — проверка корректности HTTP-з
+апросов к эндпоинтам
+ []
+
+[48] [49]
+File: ../results/img/tests/vittest.png Graphic file (type bmp)
+<../results/img/tests/vittest.png>
+File: ../results/img/tests/swagger-get-reports.png Graphic file (type bmp)
+<../results/img/tests/swagger-get-reports.png>
+ [50]
+Overfull \hbox (46.42686pt too wide) in paragraph at lines 103--104
+[]\TU/TimesNewRoman(1)/m/n/14.4 На рисунке []46[] представлен запрос на поиск д
+убликатов (GET /api/Reports/duplicates).
+ []
+
+File: ../results/img/tests/swagger-find-duplicates.png Graphic file (type bmp)
+<../results/img/tests/swagger-find-duplicates.png>
+File: ../results/img/tests/swagger-get-categories.png Graphic file (type bmp)
+<../results/img/tests/swagger-get-categories.png>
+[51]
+File: ../results/img/swagger/create-report.png Graphic file (type bmp)
+<../results/img/swagger/create-report.png>
+ [52]
+File: ../results/img/screenshots/web/adaptive-web-panel.png Graphic file (type 
+bmp)
+<../results/img/screenshots/web/adaptive-web-panel.png>
+File: ../results/img/screenshots/web/testing-map-features.png Graphic file (typ
+e bmp)
+<../results/img/screenshots/web/testing-map-features.png>
+ [53])) [54] (sections/05-conclusion.tex [55
+
+]) [56]
+(D:\Projects\katya\диплом\преддипломная практика\latex_template\output\main.aux
+)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B4C2D474A7E004AA8F065F532BC4A140;436.
+(rerunfilecheck)             Checksum: 7EDDB84BA20525F8DCC56AEA9B79970C;12471.
  ) 
 Here is how much of TeX's memory you used:
- 19555 strings out of 402807
- 369407 string characters out of 5445135
- 871480 words of memory out of 5000000
- 48187 multiletter control sequences out of 15000+600000
- 631064 words of font info for 100 fonts, out of 8000000 for 9000
+ 20334 strings out of 402807
+ 399918 string characters out of 5445135
+ 901230 words of memory out of 5000000
+ 48873 multiletter control sequences out of 15000+600000
+ 631088 words of font info for 103 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 78i,5n,96p,1003b,393s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,8n,96p,1003b,671s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on D:\Vyatsu\LaTeX_template\latex\output\main.pdf (5 pages).
+Output written on D:\Projects\katya\диплом\преддипломная практика\latex_templat
+e\output\main.pdf (56 pages).
